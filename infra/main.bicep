@@ -172,7 +172,7 @@ param useVision bool = false
 var abbrs = loadJsonContent('./abbreviations.json')
 var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
 
-var baseTags = { 'azd-env-name': environmentName }
+var baseTags = { 'azd-env-name': environmentName, 'BlobPublicAccess': 'dfpuxgreeniddiagstage' }
 var updatedTags = union(empty(tags) ? {} : base64ToJson(tags), baseTags)
 
 
